@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Save</title>
+</head>
+<body>
+<h1>Save form</h1>
+<form th:action="@{/cloud/save/model}" th:object="${model_post}" method="post">
+    <label for="id_m">ID:</label>
+    <input type="number" id="id_m" th:field="*{id_model}">
+    <label for="name_m">Name:</label>
+    <input type="text" id="name_m" th:field="*{name_model}">
+    <label for="description_m">Desc:</label>
+    <input type="text" id="description_m" th:field="*{description_model}">
+    <input type="submit" value="subm">
+</form>
+<br>
+
+</body>
+</html>
